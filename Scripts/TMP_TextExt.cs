@@ -295,6 +295,83 @@ namespace Kogane
 		}
 
 		//================================================================================
+		// SetTextTIfNotNull
+		//================================================================================
+		/// <summary>
+		/// テキストを設定します
+		/// </summary>
+		[StringFormatMethod( "format" )]
+		public static void SetTextIfNotNull<T>
+		(
+			this TMP_Text self,
+			string        format,
+			T             arg1
+		)
+		{
+			if ( self == null ) return;
+			self.SetText( format, arg1 );
+		}
+
+		/// <summary>
+		/// テキストを設定します
+		/// </summary>
+		[StringFormatMethod( "format" )]
+		public static void SetTextIfNotNull<T1, T2>
+		(
+			this TMP_Text self,
+			string        format,
+			T1            arg1,
+			T2            arg2
+		)
+		{
+			if ( self == null ) return;
+			self.SetText( format, arg1, arg2 );
+		}
+
+		/// <summary>
+		/// テキストを設定します
+		/// </summary>
+		[StringFormatMethod( "format" )]
+		public static void SetTextIfNotNull<T1, T2, T3>
+		(
+			this TMP_Text self,
+			string        format,
+			T1            arg1,
+			T2            arg2,
+			T3            arg3
+		)
+		{
+			if ( self == null ) return;
+			self.SetText( format, arg1, arg2, arg3 );
+		}
+
+		/// <summary>
+		/// テキストを設定します
+		/// </summary>
+		[StringFormatMethod( "format" )]
+		public static void SetTextIfNotNull<T1, T2, T3, T4>
+		(
+			this TMP_Text self,
+			string        format,
+			T1            arg1,
+			T2            arg2,
+			T3            arg3,
+			T4            arg4
+		)
+		{
+			if ( self == null ) return;
+
+			self.SetText
+			(
+				format,
+				arg1,
+				arg2,
+				arg3,
+				arg4
+			);
+		}
+
+		//================================================================================
 		// SetEmpty
 		//================================================================================
 		/// <summary>
@@ -303,6 +380,15 @@ namespace Kogane
 		public static void SetEmpty( this TMP_Text self )
 		{
 			self.SetText( string.Empty );
+		}
+
+		/// <summary>
+		/// 空文字列を設定します
+		/// </summary>
+		public static void SetEmptyIfNotNull( this TMP_Text self )
+		{
+			if ( self == null ) return;
+			self.SetEmpty();
 		}
 	}
 }
