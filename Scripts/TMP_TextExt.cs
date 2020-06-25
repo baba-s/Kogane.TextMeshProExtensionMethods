@@ -7,7 +7,7 @@ namespace Kogane
 	/// <summary>
 	/// TMP_Text 型の拡張メソッドを管理するクラス
 	/// </summary>
-	public static class TMP_TextExt
+	public static class TextMeshPro_ExtensionMethods
 	{
 		//================================================================================
 		// 変数(static)
