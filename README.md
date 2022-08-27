@@ -1,4 +1,4 @@
-# UniTextMeshProExtensionMethods
+# Kogane Text Mesh Pro Extension Methods
 
 TMP_Text 型の拡張メソッドを管理するクラス
 
